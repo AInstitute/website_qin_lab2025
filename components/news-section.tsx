@@ -16,22 +16,33 @@ export function NewsSection() {
 
   const newsItems = [
     {
-      date: "Last updated on Oct 1, 2023",
+      date: "Last updated on Oct 15, 2023",
       title: t("news.item1.title"),
       description: t("news.item1.description"),
       fullContent: t("news.item1.content"),
       image: "/grassland-research.png",
-      link: "https://www.qhnews.com/newscenter/system/2023/10/01/013875234.shtml",
+      link: "#",
       category: "Media Coverage",
     },
     {
-      date: "Last updated on Dec 15, 2022",
+      date: "Last updated on Sep 20, 2023",
       title: t("news.item2.title"),
       description: t("news.item2.description"),
       fullContent: t("news.item2.content"),
-      image: "/beijing-forestry-university-gate.png",
-      link: "https://www.nsfc.gov.cn/",
+      image: "/placeholder-hc65v.png",
+      link: "#",
       category: "Funding",
+    },
+    {
+      date: "Last updated on Aug 10, 2023",
+      title: "New Publication in Briefings in Bioinformatics",
+      description:
+        "Our latest research on machine learning approaches for population genetics has been published in a top-tier journal.",
+      fullContent:
+        "We are excited to announce the publication of our latest research paper in Briefings in Bioinformatics, a leading journal in computational biology. The paper presents novel machine learning methods for analyzing population genetic data and understanding evolutionary processes.\n\nThis work represents a significant advancement in our ability to decode complex genetic patterns and their evolutionary significance. The methods developed in this study have broad applications in conservation genetics, agriculture, and evolutionary biology research.\n\nThe research was conducted in collaboration with international partners and demonstrates the power of interdisciplinary approaches combining computer science and biology.",
+      image: "/placeholder-ksrsj.png",
+      link: "#",
+      category: "Publication",
     },
   ]
 
@@ -57,16 +68,7 @@ export function NewsSection() {
                     </span>
                     <p className="text-sm text-gray-500">{item.date}</p>
                   </div>
-                  <CardTitle className="text-xl font-semibold mb-3">
-                    <a
-                      href={`/news-detail?id=${index}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-black hover:text-blue-600 transition-colors cursor-pointer"
-                    >
-                      {item.title}
-                    </a>
-                  </CardTitle>
+                  <CardTitle className="text-xl font-semibold mb-3">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
                   <p className="text-black leading-relaxed mb-4">{item.description}</p>

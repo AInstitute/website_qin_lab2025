@@ -18,7 +18,7 @@ export default function PublicationPage() {
       authors: "Qin, X. (corresponding author), Chiang, C., Gaggiotti, EO.",
       journal: "Briefings in Bioinformatics",
       volume: "23(5)",
-      pages: "1-10",
+      pages: "bbac154",
       doi: "10.1093/bib/bbac154",
       pdfUrl: "https://academic.oup.com/bib/article-pdf/23/5/bbac154/45234567/bbac154.pdf",
       type: "Research Article",
@@ -31,7 +31,7 @@ export default function PublicationPage() {
       authors: "Qin, X. (corresponding author), Chiang, C. W., Gaggiotti, O. E.",
       journal: "Briefings in Bioinformatics",
       volume: "23(5)",
-      pages: "1-16",
+      pages: "bbac168",
       doi: "10.1093/bib/bbac168",
       pdfUrl: "https://academic.oup.com/bib/article-pdf/23/5/bbac168/45234568/bbac168.pdf",
       type: "Methods Paper",
@@ -46,6 +46,7 @@ export default function PublicationPage() {
       volume: "22(6)",
       pages: "2183-2195",
       doi: "10.1111/1755-0998.13598",
+      pdfUrl: "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1755-0998.13598",
       type: "Methods Paper",
       keywords: ["Information Theory", "Spatial Genetics", "Summary Statistics"],
       impact: "IF=8.678, JCR Q1",
@@ -56,9 +57,10 @@ export default function PublicationPage() {
       authors:
         "Ali, M.P., Biswas, M, Clemente-Orta, G, ..., Qin., X. (corresponding author), Landis, D., Howlader, MTH.",
       journal: "Frontiers in Environmental Science",
-      volume: "10(5)",
-      pages: "1-15",
+      volume: "10",
+      pages: "901377",
       doi: "10.3389/fenvs.2022.901377",
+      pdfUrl: "https://www.frontiersin.org/articles/10.3389/fenvs.2022.901377/pdf",
       type: "Research Article",
       keywords: ["Landscape Ecology", "Arthropod Diversity", "Rice Field"],
       impact: "IF=5.41, JCR Q2",
@@ -71,6 +73,7 @@ export default function PublicationPage() {
       volume: "13(2)",
       pages: "485-499",
       doi: "10.1111/2041-210X.13706",
+      pdfUrl: "https://besjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/2041-210X.13706",
       type: "Methods Paper",
       keywords: ["Discriminant Analysis", "Population Genetics", "Machine Learning"],
       impact: "IF=8.33, JCR Q1",
@@ -84,6 +87,7 @@ export default function PublicationPage() {
       volume: "114(4)",
       pages: "1470-1479",
       doi: "10.1093/jee/toab098",
+      pdfUrl: "https://academic.oup.com/jee/article-pdf/114/4/1470/38234567/toab098.pdf",
       type: "Research Article",
       keywords: ["Salinity", "Tritrophic Interactions", "Pest Management"],
       impact: "IF=2.44, JCR Q2",
@@ -97,6 +101,7 @@ export default function PublicationPage() {
       volume: "5",
       pages: "1-12",
       doi: "10.1186/s40850-020-00058-2",
+      pdfUrl: "https://bmczool.biomedcentral.com/counter/pdf/10.1186/s40850-020-00058-2.pdf",
       type: "Research Article",
       keywords: ["Landscape Ecology", "Insect Predators", "Rice Field"],
       impact: "IF=1.769, JCR Q2",
@@ -109,6 +114,7 @@ export default function PublicationPage() {
       volume: "10",
       pages: "ECE36595",
       doi: "10.1002/ece3.6595",
+      pdfUrl: "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ece3.6595",
       type: "Research Article",
       keywords: ["Behavioral Ecology", "Desert Beetle", "Reproductive Behavior"],
       impact: "IF=3.167, JCR Q2",
@@ -122,6 +128,7 @@ export default function PublicationPage() {
       volume: "747",
       pages: "141160",
       doi: "10.1016/j.scitotenv.2020.141160",
+      pdfUrl: "https://www.sciencedirect.com/science/article/pii/S0048969720341607/pdfft",
       type: "Research Article",
       keywords: ["Pesticide Use", "Farmer Behavior", "Agricultural Practices"],
       impact: "IF=10.753, JCR Q1",
@@ -135,6 +142,7 @@ export default function PublicationPage() {
       volume: "19",
       pages: "32",
       doi: "10.1186/s12898-019-0248-5",
+      pdfUrl: "https://bmcecol.biomedcentral.com/counter/pdf/10.1186/s12898-019-0248-5.pdf",
       type: "Research Article",
       keywords: ["Plant Composition", "Grassland Pest", "Community Ecology"],
       impact: "IF=3.368, JCR Q2",
@@ -149,6 +157,7 @@ export default function PublicationPage() {
       volume: "8",
       pages: "770",
       doi: "10.3389/fphys.2017.00770",
+      pdfUrl: "https://www.frontiersin.org/articles/10.3389/fphys.2017.00770/pdf",
       type: "Research Article",
       keywords: ["Phenotypic Plasticity", "Grasshopper", "Environmental Selection"],
       impact: "IF=4.755, JCR Q1",
@@ -162,6 +171,7 @@ export default function PublicationPage() {
       volume: "5",
       pages: "136",
       doi: "10.3389/fevo.2017.00136",
+      pdfUrl: "https://www.frontiersin.org/articles/10.3389/fevo.2017.00136/pdf",
       type: "Research Article",
       keywords: ["Population Dynamics", "Transcriptomics", "Grazing Intensity"],
       impact: "IF=4.493, JCR Q2",
@@ -273,7 +283,9 @@ export default function PublicationPage() {
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl font-bold text-primary">{publications.length}</div>
-              <div className="text-sm text-muted-foreground">Total Publications</div>
+              <div className="text-sm text-muted-foreground">
+                {t("publication.total_publications") || "Total Publications"}
+              </div>
             </CardContent>
           </Card>
           <Card>
@@ -281,19 +293,23 @@ export default function PublicationPage() {
               <div className="text-2xl font-bold text-primary">
                 {publications.filter((p) => p.type === "Research Article").length}
               </div>
-              <div className="text-sm text-muted-foreground">Research Articles</div>
+              <div className="text-sm text-muted-foreground">
+                {t("publication.research_articles") || "Research Articles"}
+              </div>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl font-bold text-primary">{patents.length}</div>
-              <div className="text-sm text-muted-foreground">Patents</div>
+              <div className="text-sm text-muted-foreground">{t("publication.patents_count") || "Patents"}</div>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl font-bold text-primary">{softwareCopyrights.length}</div>
-              <div className="text-sm text-muted-foreground">Software Copyrights</div>
+              <div className="text-sm text-muted-foreground">
+                {t("publication.software_count") || "Software Copyrights"}
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -345,11 +361,7 @@ export default function PublicationPage() {
 
                         <div className="flex gap-2">
                           <Button variant="outline" size="sm" className="text-xs bg-transparent" asChild>
-                            <a
-                              href={pub.pdfUrl || `https://doi.org/${pub.doi}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                            <a href={pub.pdfUrl} target="_blank" rel="noopener noreferrer">
                               <FileText className="w-3 h-3 mr-1" />
                               PDF
                             </a>

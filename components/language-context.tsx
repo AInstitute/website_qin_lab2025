@@ -57,6 +57,27 @@ const translations = {
     "research.methodologies": "Research Methodologies",
     "research.focus_areas": "Focus Areas",
     "research.collaborative": "Collaborative Research",
+    "research.ml_population_genetics": "Machine Learning in Population Genetics",
+    "research.ml_population_genetics_desc":
+      "Developing and applying state-of-the-art machine learning methods including random forest classification/regression, UMAP, t-SNE, and deep learning to study spatial patterns of genetic variation and uncover the genetic basis of local adaptation.",
+    "research.eco_evolutionary": "Eco-evolutionary Feedback Systems",
+    "research.eco_evolutionary_desc":
+      "Interpretation of eco-evolutionary feedback by linking environment, genetic diversity, and species diversity using machine learning approaches to understand complex ecosystem dynamics.",
+    "research.computational_genomics": "Computational Population Genomics",
+    "research.computational_genomics_desc":
+      "Statistics, machine learning, and deep learning for population genetic inference, developing new computational tools to decipher signals of evolutionary changes in genomic data.",
+    "research.computational_approaches": "Computational Approaches",
+    "research.data_types": "Data Types & Sources",
+    "research.genetic_diversity": "Genetic Diversity",
+    "research.genetic_diversity_desc": "Understanding patterns and drivers of intraspecific genetic variation",
+    "research.local_adaptation": "Local Adaptation",
+    "research.local_adaptation_desc": "Identifying genetic basis of adaptation to local environmental conditions",
+    "research.species_diversity": "Species Diversity",
+    "research.species_diversity_desc": "Analyzing interspecies diversity patterns and ecological drivers",
+    "research.collaborative_desc":
+      "Our research involves collaborations with leading institutions and researchers worldwide, combining expertise in computational biology, ecology, and evolutionary genetics.",
+    "research.key_collaborations": "Key Collaborations",
+    "research.research_networks": "Research Networks",
 
     // Publication Page
     "publication.title": "Publications & Achievements",
@@ -92,6 +113,31 @@ const translations = {
     "contact.office_hours_3": "Friday 14:00 to 17:00",
     "contact.appointments_label": "Appointments",
     "contact.book_appointment": "Book an appointment",
+
+    // Hero Section
+    "hero.title": "Qin Research Group",
+    "hero.description":
+      "The Qin Research Group lies in the intersection of ecology, genetics and evolution where we use statistical and machine learning tools to better understand how are genetic and phenotypic variation originated, developed and maintained.",
+
+    // People Page
+    "people.title": "People",
+    "people.description":
+      "Meet our research team members who are dedicated to advancing the frontiers of computational biology, ecology, and evolutionary genetics.",
+    "people.principal_investigator": "Principal Investigator",
+    "people.graduate_students": "Graduate Students",
+    "people.undergraduate_students": "Undergraduate Students",
+    "people.alumni": "Alumni",
+
+    // Events Page
+    "events.title": "Events",
+    "events.description": "Stay updated with our latest seminars, workshops, conferences, and research presentations.",
+    "events.upcoming": "Upcoming Events",
+    "events.past": "Past Events",
+
+    // Lab Page
+    "lab.title": "Lab",
+    "lab.description":
+      "Explore our research facilities, equipment, and laboratory environment where cutting-edge computational biology research takes place.",
   },
   zh: {
     // Navigation
@@ -136,6 +182,27 @@ const translations = {
     "research.methodologies": "研究方法",
     "research.focus_areas": "重点研究方向",
     "research.collaborative": "合作研究",
+    "research.ml_population_genetics": "群体遗传学中的机器学习",
+    "research.ml_population_genetics_desc":
+      "开发和应用最先进的机器学习方法，包括随机森林分类/回归、UMAP、t-SNE和深度学习，研究遗传变异的空间模式并揭示局部适应的遗传基础。",
+    "research.eco_evolutionary": "生态-进化反馈系统",
+    "research.eco_evolutionary_desc":
+      "通过使用机器学习方法连接环境、遗传多样性和物种多样性来解释生态-进化反馈，理解复杂的生态系统动态。",
+    "research.computational_genomics": "计算群体基因组学",
+    "research.computational_genomics_desc":
+      "用于群体遗传推断的统计学、机器学习和深度学习，开发新的计算工具来解读基因组数据中的进化变化信号。",
+    "research.computational_approaches": "计算方法",
+    "research.data_types": "数据类型与来源",
+    "research.genetic_diversity": "遗传多样性",
+    "research.genetic_diversity_desc": "理解种内遗传变异的模式和驱动因素",
+    "research.local_adaptation": "局部适应",
+    "research.local_adaptation_desc": "识别适应局部环境条件的遗传基础",
+    "research.species_diversity": "物种多样性",
+    "research.species_diversity_desc": "分析种间多样性模式和生态驱动因素",
+    "research.collaborative_desc":
+      "我们的研究涉及与世界领先机构和研究人员的合作，结合计算生物学、生态学和进化遗传学的专业知识。",
+    "research.key_collaborations": "主要合作",
+    "research.research_networks": "研究网络",
 
     // Publication Page
     "publication.title": "学术成果与荣誉",
@@ -171,6 +238,29 @@ const translations = {
     "contact.office_hours_3": "周五 14:00 至 17:00",
     "contact.appointments_label": "预约",
     "contact.book_appointment": "预约会面",
+
+    // Hero Section
+    "hero.title": "秦兴虎研究组",
+    "hero.description":
+      "秦兴虎研究组位于生态学、遗传学和进化生物学的交叉领域，我们使用统计学和机器学习工具来更好地理解遗传和表型变异是如何产生、发展和维持的。",
+
+    // People Page
+    "people.title": "团队成员",
+    "people.description": "认识我们的研究团队成员，他们致力于推进计算生物学、生态学和进化遗传学的前沿。",
+    "people.principal_investigator": "课题组长",
+    "people.graduate_students": "研究生",
+    "people.undergraduate_students": "本科生",
+    "people.alumni": "校友",
+
+    // Events Page
+    "events.title": "学术活动",
+    "events.description": "了解我们最新的研讨会、工作坊、会议和研究报告的最新信息。",
+    "events.upcoming": "即将举行的活动",
+    "events.past": "过往活动",
+
+    // Lab Page
+    "lab.title": "实验室",
+    "lab.description": "探索我们的研究设施、设备和实验室环境，这里进行着前沿的计算生物学研究。",
   },
 }
 
