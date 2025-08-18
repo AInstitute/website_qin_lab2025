@@ -1,6 +1,7 @@
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Calendar, Users, Award, BookOpen, Globe, Microscope } from "lucide-react"
+import Link from "next/link"
 
 export default function LabNewsPage() {
   return (
@@ -25,7 +26,15 @@ export default function LabNewsPage() {
           <div className="max-w-6xl mx-auto px-4">
             {/* Featured News */}
             <div className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured News</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">
+                <Link
+                  href="/featured-news-detail"
+                  target="_blank"
+                  className="text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  Featured News
+                </Link>
+              </h2>
               <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
                 <div className="flex items-start gap-4">
                   <Award className="w-8 h-8 text-blue-600 mt-1" />

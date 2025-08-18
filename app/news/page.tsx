@@ -6,6 +6,7 @@ import { NewsSection } from "@/components/news-section"
 import { Users, Award, BookOpen, Globe, Microscope, ExternalLink, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import Link from "next/link"
 
 export default function NewsPage() {
   const [expandedItems, setExpandedItems] = useState<number[]>([])
@@ -144,7 +145,15 @@ This outreach activity aligns with our lab's commitment to science education and
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">Latest News</h1>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                <Link
+                  href="/news-detail"
+                  target="_blank"
+                  className="text-blue-600 hover:text-blue-800 transition-colors"
+                >
+                  Latest News
+                </Link>
+              </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Stay updated with the latest developments, achievements, and activities from the Qin Research Lab
               </p>
@@ -214,8 +223,18 @@ This outreach activity aligns with our lab's commitment to science education and
                         )}
                       </Button>
 
-                      <Button variant="default" size="sm" asChild className="flex items-center gap-1 text-xs">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        asChild
+                        className="flex items-center gap-1 text-xs bg-transparent hover:bg-transparent border-none p-0"
+                      >
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-800 hover:text-blue-900"
+                        >
                           <ExternalLink className="w-3 h-3" />
                           Link
                         </a>

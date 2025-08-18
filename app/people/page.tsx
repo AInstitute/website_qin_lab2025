@@ -29,7 +29,7 @@ export default function PeoplePage() {
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-shrink-0">
                   <img
-                    src="/dr-xinghu-qin-headshot.png"
+                    src="/dr-xinghu-qin-headshot.jpg"
                     alt="Dr. Xinghu Qin"
                     className="w-48 h-48 rounded-lg object-cover mx-auto"
                   />

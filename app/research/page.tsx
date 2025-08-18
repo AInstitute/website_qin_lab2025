@@ -10,7 +10,7 @@ export default function ResearchPage() {
 
       <div className="py-12 px-4 max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-serif font-bold text-primary mb-4">Research</h1>
+          <h1 className="text-4xl font-serif font-bold text-teal-600 mb-4">Research</h1>
           <p className="text-lg text-black max-w-3xl">
             Our research focuses on the intersection of machine learning, ecology, and evolutionary biology, developing
             computational tools to understand complex biological systems and evolutionary processes.
@@ -21,7 +21,7 @@ export default function ResearchPage() {
           {/* Current Research Areas */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-serif text-primary">Current Research Areas</CardTitle>
+              <CardTitle className="text-2xl font-serif text-teal-600">Current Research Areas</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
@@ -79,7 +79,7 @@ export default function ResearchPage() {
           {/* Research Methodologies */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-serif text-primary">Research Methodologies</CardTitle>
+              <CardTitle className="text-2xl font-serif text-teal-600">Research Methodologies</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
@@ -110,24 +110,24 @@ export default function ResearchPage() {
           {/* Research Focus Areas */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-serif text-primary">Focus Areas</CardTitle>
+              <CardTitle className="text-2xl font-serif text-teal-600">Focus Areas</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-4 border rounded-lg">
-                  <h3 className="text-lg font-semibold mb-2 text-primary">Genetic Diversity</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-teal-600">Genetic Diversity</h3>
                   <p className="text-sm text-muted-foreground">
                     Understanding patterns and drivers of intraspecific genetic variation
                   </p>
                 </div>
                 <div className="text-center p-4 border rounded-lg">
-                  <h3 className="text-lg font-semibold mb-2 text-primary">Local Adaptation</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-teal-600">Local Adaptation</h3>
                   <p className="text-sm text-muted-foreground">
                     Identifying genetic basis of adaptation to local environmental conditions
                   </p>
                 </div>
                 <div className="text-center p-4 border rounded-lg">
-                  <h3 className="text-lg font-semibold mb-2 text-primary">Species Diversity</h3>
+                  <h3 className="text-lg font-semibold mb-2 text-teal-600">Species Diversity</h3>
                   <p className="text-sm text-muted-foreground">
                     Analyzing interspecies diversity patterns and ecological drivers
                   </p>
@@ -139,7 +139,7 @@ export default function ResearchPage() {
           {/* Collaborative Research */}
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl font-serif text-primary">Collaborative Research</CardTitle>
+              <CardTitle className="text-2xl font-serif text-teal-600">Collaborative Research</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-black mb-4">

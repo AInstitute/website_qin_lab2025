@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Calendar, Clock, MapPin, Users, ExternalLink, Video, ChevronLeft, ChevronRight } from "lucide-react"
@@ -7,8 +9,9 @@ import { useState } from "react"
 
 export default function EventsPage() {
   const [currentDate, setCurrentDate] = useState(new Date())
+  const [email, setEmail] = useState("")
+  const [isSubscribed, setIsSubscribed] = useState(false)
 
-  // Sample events data with actual dates
   const events = [
     { date: new Date(2025, 0, 25), title: "Deep Learning Workshop", type: "workshop" },
     { date: new Date(2025, 1, 8), title: "Guest Lecture: Dr. Sarah Mitchell", type: "seminar" },
@@ -76,6 +79,16 @@ export default function EventsPage() {
     "November",
     "December",
   ]
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      console.log("[v0] Subscribing email:", email)
+      setIsSubscribed(true)
+      setEmail("")
+      setTimeout(() => setIsSubscribed(false), 3000)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -490,16 +503,27 @@ export default function EventsPage() {
               Subscribe to our mailing list to receive notifications about upcoming events, seminars, and lab
               activities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
+                required
                 className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              <button
+                type="submit"
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              >
                 Subscribe
               </button>
-            </div>
+            </form>
+            {isSubscribed && (
+              <p className="mt-4 text-green-600 font-medium">
+                Thank you for subscribing! You'll receive updates about our events.
+              </p>
+            )}
           </div>
         </section>
       </main>

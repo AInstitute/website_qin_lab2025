@@ -114,7 +114,7 @@ export function AboutSection() {
         <div>
           <Card>
             <CardContent className="p-6">
-              <img src="/placeholder-699y1.png" alt="Dr. Xinghu Qin" className="w-full rounded-lg shadow-md" />
+              <img src="/dr-xinghu-qin-headshot.jpg" alt="Dr. Xinghu Qin" className="w-full rounded-lg shadow-md" />
             </CardContent>
           </Card>
         </div>

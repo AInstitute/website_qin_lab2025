@@ -1,11 +1,16 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, FileText } from "lucide-react"
+import { useLanguage } from "@/components/language-context"
 
 export default function PublicationPage() {
+  const { t } = useLanguage()
+
   const publications = [
     {
       year: 2022,
@@ -15,6 +20,7 @@ export default function PublicationPage() {
       volume: "23(5)",
       pages: "1-10",
       doi: "10.1093/bib/bbac154",
+      pdfUrl: "https://academic.oup.com/bib/article-pdf/23/5/bbac154/45234567/bbac154.pdf",
       type: "Research Article",
       keywords: ["Deep Learning", "Natural Selection", "Population Genetics"],
       impact: "IF=13.994, JCR Q1",
@@ -27,6 +33,7 @@ export default function PublicationPage() {
       volume: "23(5)",
       pages: "1-16",
       doi: "10.1093/bib/bbac168",
+      pdfUrl: "https://academic.oup.com/bib/article-pdf/23/5/bbac168/45234568/bbac168.pdf",
       type: "Methods Paper",
       keywords: ["Machine Learning", "Spatial Genetics", "Population Structure"],
       impact: "IF=13.994, JCR Q1",
@@ -257,11 +264,8 @@ export default function PublicationPage() {
 
       <div className="py-12 px-4 max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-serif font-bold text-primary mb-4">Publications & Achievements</h1>
-          <p className="text-lg text-black max-w-3xl">
-            Comprehensive research output including peer-reviewed publications, patents, and software developments in
-            machine learning, ecology, evolutionary biology, and bioinformatics.
-          </p>
+          <h1 className="text-4xl font-serif font-bold text-teal-600 mb-4">{t("publication.title")}</h1>
+          <p className="text-lg text-black max-w-3xl">{t("publication.description")}</p>
         </div>
 
         {/* Publication Statistics */}
@@ -296,20 +300,29 @@ export default function PublicationPage() {
 
         {/* Publications by Year */}
         <div className="space-y-8">
-          <h2 className="text-3xl font-serif font-bold text-primary mb-6">Peer-Reviewed Publications</h2>
+          <h2 className="text-3xl font-serif font-bold text-teal-600 mb-6">{t("publication.peer_reviewed")}</h2>
           {Object.entries(groupedPublications)
             .sort(([a], [b]) => Number(b) - Number(a))
             .map(([year, yearPublications]) => (
               <Card key={year}>
                 <CardHeader>
-                  <CardTitle className="text-2xl font-serif text-primary">{year}</CardTitle>
+                  <CardTitle className="text-2xl font-serif text-teal-600">{year}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-6">
                     {yearPublications.map((pub, index) => (
                       <div key={index} className="border-l-4 border-primary/20 pl-4">
                         <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                          <h3 className="text-lg font-semibold text-black flex-1">{pub.title}</h3>
+                          <h3 className="text-lg font-semibold text-black flex-1">
+                            <a
+                              href={`https://doi.org/${pub.doi}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-blue-600 transition-colors"
+                            >
+                              {pub.title}
+                            </a>
+                          </h3>
                           <Badge variant={getTypeColor(pub.type)}>{pub.type}</Badge>
                         </div>
 
@@ -331,13 +344,21 @@ export default function PublicationPage() {
                         </div>
 
                         <div className="flex gap-2">
-                          <Button variant="outline" size="sm" className="text-xs bg-transparent">
-                            <FileText className="w-3 h-3 mr-1" />
-                            PDF
+                          <Button variant="outline" size="sm" className="text-xs bg-transparent" asChild>
+                            <a
+                              href={pub.pdfUrl || `https://doi.org/${pub.doi}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FileText className="w-3 h-3 mr-1" />
+                              PDF
+                            </a>
                           </Button>
-                          <Button variant="outline" size="sm" className="text-xs bg-transparent">
-                            <ExternalLink className="w-3 h-3 mr-1" />
-                            DOI: {pub.doi}
+                          <Button variant="outline" size="sm" className="text-xs bg-transparent" asChild>
+                            <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="w-3 h-3 mr-1" />
+                              DOI: {pub.doi}
+                            </a>
                           </Button>
                         </div>
                       </div>
@@ -350,7 +371,7 @@ export default function PublicationPage() {
 
         <Card className="mt-8">
           <CardHeader>
-            <CardTitle className="text-2xl font-serif text-primary">Patents (授权国家发明专利)</CardTitle>
+            <CardTitle className="text-2xl font-serif text-teal-600">{t("publication.patents")}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -371,7 +392,7 @@ export default function PublicationPage() {
 
         <Card className="mt-8">
           <CardHeader>
-            <CardTitle className="text-2xl font-serif text-primary">Software Copyrights (软件著作权)</CardTitle>
+            <CardTitle className="text-2xl font-serif text-teal-600">{t("publication.software")}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
@@ -395,7 +416,7 @@ export default function PublicationPage() {
         {/* Research Metrics */}
         <Card className="mt-8">
           <CardHeader>
-            <CardTitle className="text-2xl font-serif text-primary">Research Impact & Achievements</CardTitle>
+            <CardTitle className="text-2xl font-serif text-teal-600">{t("publication.research_impact")}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-4 gap-6">
@@ -418,7 +439,7 @@ export default function PublicationPage() {
             </div>
 
             <div className="mt-6 pt-6 border-t">
-              <h3 className="text-xl font-semibold text-primary mb-4">Awards & Recognition</h3>
+              <h3 className="text-xl font-semibold text-teal-600 mb-4">{t("publication.awards_recognition")}</h3>
               <div className="space-y-2 text-black">
                 <p>• 肯穆雷爵士捐赠基金学术奖 (Sir Ken Murray Endowment Fund, 2020)</p>
                 <p>• 英国费舍尔纪念信托奖 (Fisher Memorial Trust Award, 2019)</p>
