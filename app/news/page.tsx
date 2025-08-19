@@ -151,7 +151,7 @@ This outreach activity aligns with our lab's commitment to science education and
                   target="_blank"
                   className="text-blue-600 hover:text-blue-800 transition-colors"
                 >
-                  Latest News
+                  Latest News 最新动态 
                 </Link>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">

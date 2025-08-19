@@ -41,7 +41,7 @@ export default function PeoplePage() {
                     <MapPin className="w-4 h-4 text-gray-500" />
                     <span className="text-gray-600">
                       {
-                        "北京林业大学生态与自然保护学院 Beijing Forestry University, School of Ecology and Nature Conservation"
+                        "Beijing Forestry University, School of Ecology and Nature Conservation"
                       }
                     </span>
                   </div>
